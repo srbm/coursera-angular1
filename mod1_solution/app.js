@@ -10,9 +10,9 @@ function LunchCheckController($scope) {
   $scope.tooMuch = "Too Much!";
   $scope.enjoy = "Enjoy";
   $scope.noData = "Please enter data first";
-  $scope.msg = "Test Msg";
+  $scope.msg = "";
   $scope.checkFood = function() {
-    if ($scope.input.split(',').length == 0) {
+    if ($scope.input == "") {
       return $scope.msg = $scope.noData;
     } else if ($scope.input.split(',').length < 4) {
       return $scope.msg = $scope.enjoy;
